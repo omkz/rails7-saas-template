@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  devise_for :users
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  resources :team_members
 
-  # Defines the root path route ("/")
+  devise_for :users
   root "home#index"
+
+  resources :teams
 end
